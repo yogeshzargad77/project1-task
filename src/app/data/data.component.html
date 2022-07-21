@@ -1,0 +1,23 @@
+
+
+
+<table class="table table-responsive">
+    <tr>
+        <th>Id</th>
+        <th>E-mail</th>
+        <th> Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Website</th>
+
+    </tr>
+    <tr *ngFor="let dt of userData">
+        <td>{{dt.id}}</td> 
+        <td>{{dt.email}}</td>  
+        <td>{{dt.name}}</td>   
+        <td>{{dt.phone}}</td>   
+        <td>{{dt.address}}. {{dt.address.city}}</td>
+        <td>{{dt.website}}</td>
+
+    </tr>
+</table>

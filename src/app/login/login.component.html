@@ -1,0 +1,52 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <form class="start" [formGroup]="myForm" (ngSubmit)="onSubmitForm()">
+                <div class="form-group">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" class="form-control" formControlName="fname" 
+                    required [ngClass]="{'is-invalid': isSubmitted && f.fname.errors}" 
+                    placeholder="first name is required">
+                    <div *ngIf="isSubmitted && f.fname.errors ?.required">First Name is required</div>
+                </div><br>
+                
+                <div class="form-group">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text"  class="form-control" formControlName="lname" 
+                    required [ngClass]="{'is-invalid': isSubmitted && f.lname.errors}" 
+                    placeholder="last name is required">
+                    <div *ngIf="isSubmitted && f.lname.errors ?.required">Last Name is required</div>
+                </div><br>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email"  class="form-control" formControlName="email"
+                    required [ngClass]="{'is-invalid': isSubmitted && f.email.errors}" 
+                    placeholder="Email is required">
+                    <div *ngIf="isSubmitted && f.email.errors ?.required">Email is required</div>
+                    <div *ngIf="isSubmitted && f.email.errors ?.pattern">Please Enter valid Email</div>
+                </div><br>
+                
+                <div class="form-group">
+                    <label for="pass">Password:</label>
+                    <input type="password"  class="form-control" formControlName="pass">
+                </div><br>
+                
+                <div class="form-group">
+                    <label for="cpass">Confirm Password:</label>
+                    <input type="password"  class="form-control" formControlName="cpass">
+                </div><br>
+                
+                <div class="form-group">
+                    <button class="btn btn-danger">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    
+    
+    
